@@ -46,3 +46,24 @@ foreach (var x in db.Games.ToList())
 {
     Console.WriteLine(x.GameId + " " + x.Name + " / " + x.Developer!.Name);
 }
+// smazání
+Game? f3 = db.Games.Where(x => x.Name == "Fallout 3").SingleOrDefault();
+if (f3 != null)
+{
+    db.Remove(f3);
+    db.SaveChanges();
+}
+foreach (var x in db.Games.ToList())
+{
+    Console.WriteLine(x.GameId + " " + x.Name + " / " + x.Developer!.Name);
+}
+Company? beth = db.Companies.Where(x => x.CompanyId == 2).SingleOrDefault();
+if (beth != null)
+{
+    Console.WriteLine(beth.Name);
+    db.Entry(beth).Collection(x => x.Games).Load();
+    foreach(var x in beth.Games!)
+    {
+        Console.WriteLine(" - " + x.Name);
+    }
+}
