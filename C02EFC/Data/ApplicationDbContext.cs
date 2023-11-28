@@ -13,9 +13,9 @@ namespace C02EFC.Data
     {
         private string _connectionString;
 
-        public ApplicationDbContext(string connectionString) : base()
+        public ApplicationDbContext() : base()
         {
-            _connectionString = connectionString;
+            _connectionString = @"Data Source=myGames.sqlite";
         }
 
         public DbSet<Game> Games { get; set; }
@@ -35,6 +35,22 @@ namespace C02EFC.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<Company>().HasData(new Company { CompanyId = 1, Name = "CD Project RED"});
+            modelBuilder.Entity<Company>().HasData(new Company { CompanyId = 2, Name = "Bethesda" });
+            modelBuilder.Entity<Company>().HasData(new Company { CompanyId = 3, Name = "Obsidian" });
+            modelBuilder.Entity<Game>().HasData(new Game { GameId = 1, Name = "Cyberpunk 2077", DeveloperId = 1 });
+            modelBuilder.Entity<Game>().HasData(new Game { GameId = 2, Name = "Skyrim", DeveloperId = 2 });
+            modelBuilder.Entity<Game>().HasData(new Game { GameId = 3, Name = "Fallout 4", DeveloperId = 2 });
+            modelBuilder.Entity<Game>().HasData(new Game { GameId = 4, Name = "Starfield", DeveloperId = 2 });
+            modelBuilder.Entity<Game>().HasData(new Game { GameId = 5, Name = "Oblivion", DeveloperId = 2 });
+            modelBuilder.Entity<Game>().HasData(new Game { GameId = 6, Name = "Outer Worlds", DeveloperId = 3 });
+
         }
     }
+    /*
+     * Migrace:
+     * NuGet\Package Manager Console
+     * Add-Migration Init
+     * Update-Database
+     */
 }
