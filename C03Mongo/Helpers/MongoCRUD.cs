@@ -1,6 +1,7 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Driver;
 using System;
+using System.Buffers.Text;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,6 +27,15 @@ namespace C03Mongo.Helpers
             coll.InsertOne(document);
         }
 
+        public T? Read<T>(string collectionName, string id)
+        {
+            byte[] bytes = Convert.FromBase64String(id);
+            Guid guid = new Guid(bytes.Reverse().ToArray());
+            var coll = _database.GetCollection<T>(collectionName);
+            var filter = Builders<T>.Filter.Eq("Id", guid);
+            return coll.Find(filter).FirstOrDefault();
+        }
+
         public T? Read<T>(string collectionName, Guid id)
         {
             var coll = _database.GetCollection<T>(collectionName);
@@ -39,19 +49,20 @@ namespace C03Mongo.Helpers
             return coll.Find(new BsonDocument()).ToList();
         }
 
-        public void Delete<T>(string table, Guid id)
+        public void Delete<T>(string collectionName, Guid id)
         {
-            var collection = _database.GetCollection<T>(table);
+            var collection = _database.GetCollection<T>(collectionName);
             var filter = Builders<T>.Filter.Eq("Id", id);
             collection.DeleteOne(filter);
         }
-        public void UpsertRecord<T>(string table, Guid id, T record)
+        public void Upsert<T>(string collectionName, Guid id, T record)
         {
-            var collection = _database.GetCollection<T>(table);
+            var collection = _database.GetCollection<T>(collectionName);
+            BsonBinaryData binData = new BsonBinaryData(id, GuidRepresentation.Standard);
             var result = collection.ReplaceOne(
-                new BsonDocument("_id", id),
+                filter: new BsonDocument("_id", binData),
                 record,
-                new ReplaceOptions { IsUpsert = true });
+                options: new ReplaceOptions { IsUpsert = true });
         }
     }
 }

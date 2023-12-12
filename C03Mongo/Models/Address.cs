@@ -7,7 +7,7 @@ namespace C03Mongo.Models
     internal class Address
     {
         [BsonId]
-        [BsonRepresentation(BsonType.ObjectId)]
+        //[BsonRepresentation(BsonType.ObjectId)]
         public Guid Id { get; set; }
         public string Street { get; set; } = string.Empty;
         public string Municipality { get; set; } = string.Empty;
