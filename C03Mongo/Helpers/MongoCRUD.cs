@@ -26,10 +26,10 @@ namespace C03Mongo.Helpers
             coll.InsertOne(document);
         }
 
-        public T? Read<T>(string collectionName, string id)
+        public T? Read<T>(string collectionName, Guid id)
         {
             var coll = _database.GetCollection<T>(collectionName);
-            var filter = Builders<T>.Filter.Eq("Id", new ObjectId(id));
+            var filter = Builders<T>.Filter.Eq("Id", id);
             return coll.Find(filter).FirstOrDefault();
         }
 
@@ -37,6 +37,21 @@ namespace C03Mongo.Helpers
         {
             var coll = _database.GetCollection<T>(collectionName);
             return coll.Find(new BsonDocument()).ToList();
+        }
+
+        public void Delete<T>(string table, Guid id)
+        {
+            var collection = _database.GetCollection<T>(table);
+            var filter = Builders<T>.Filter.Eq("Id", id);
+            collection.DeleteOne(filter);
+        }
+        public void UpsertRecord<T>(string table, Guid id, T record)
+        {
+            var collection = _database.GetCollection<T>(table);
+            var result = collection.ReplaceOne(
+                new BsonDocument("_id", id),
+                record,
+                new ReplaceOptions { IsUpsert = true });
         }
     }
 }
