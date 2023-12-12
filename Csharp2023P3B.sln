@@ -5,7 +5,9 @@ VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "C01Dapper", "C01Dapper\C01Dapper.csproj", "{D810CCCB-C024-4F47-96A5-E23CC27DC9B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C02EFC", "C02EFC\C02EFC.csproj", "{9C382F2D-769D-4D41-8C2F-5D6F60087FC4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "C02EFC", "C02EFC\C02EFC.csproj", "{9C382F2D-769D-4D41-8C2F-5D6F60087FC4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C03Mongo", "C03Mongo\C03Mongo.csproj", "{60519B8E-6FA8-43F4-A8DD-8F6D9865DF92}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{9C382F2D-769D-4D41-8C2F-5D6F60087FC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C382F2D-769D-4D41-8C2F-5D6F60087FC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C382F2D-769D-4D41-8C2F-5D6F60087FC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60519B8E-6FA8-43F4-A8DD-8F6D9865DF92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60519B8E-6FA8-43F4-A8DD-8F6D9865DF92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60519B8E-6FA8-43F4-A8DD-8F6D9865DF92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60519B8E-6FA8-43F4-A8DD-8F6D9865DF92}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
