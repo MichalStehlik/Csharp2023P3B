@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="C05FirstMaui.MainPage">
+    <ScrollView>
+        <HorizontalStackLayout 
+            BackgroundColor="Aquamarine" 
+            Margin="10" 
+            VerticalOptions="CenterAndExpand">
+            <Button Text="-5" x:Name="btnDec5" Clicked="btnDec5_Clicked"/>
+            <Button Text="-1" x:Name="btnDec1" Clicked="btnDec1_Clicked"/>
+            <Label 
+                Text="1" 
+                Margin="10" 
+                HorizontalOptions="CenterAndExpand"
+                x:Name="lblValue"
+                FontSize="10"
+                />
+            <Button Text="+1" x:Name="btnInc1" Clicked="btnInc1_Clicked"/>
+            <Button Text="+5" x:Name="btnInc5" Clicked="btnInc5_Clicked"/>
+        </HorizontalStackLayout>
+    </ScrollView>
+</ContentPage>
