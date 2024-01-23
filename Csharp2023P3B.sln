@@ -13,7 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "C04Events", "C04Events\C04E
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "C05FirstMaui", "C05FirstMaui\C05FirstMaui.csproj", "{9632634E-5C99-42E2-8AF3-40DE0E11289A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C06Layout", "C06Layout\C06Layout.csproj", "{BBAFCB67-7682-4DC4-A8A7-224A679DE3FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "C06Layout", "C06Layout\C06Layout.csproj", "{BBAFCB67-7682-4DC4-A8A7-224A679DE3FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C07Components", "C07Components\C07Components.csproj", "{FCF822DD-F7AB-4082-BA52-BFF1BD4576C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C08Clock", "C08Clock\C08Clock.csproj", "{8E2EE351-3FFB-488F-8047-0215F79357BF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +53,18 @@ Global
 		{BBAFCB67-7682-4DC4-A8A7-224A679DE3FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BBAFCB67-7682-4DC4-A8A7-224A679DE3FE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BBAFCB67-7682-4DC4-A8A7-224A679DE3FE}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{FCF822DD-F7AB-4082-BA52-BFF1BD4576C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCF822DD-F7AB-4082-BA52-BFF1BD4576C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCF822DD-F7AB-4082-BA52-BFF1BD4576C2}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{FCF822DD-F7AB-4082-BA52-BFF1BD4576C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCF822DD-F7AB-4082-BA52-BFF1BD4576C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCF822DD-F7AB-4082-BA52-BFF1BD4576C2}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{8E2EE351-3FFB-488F-8047-0215F79357BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E2EE351-3FFB-488F-8047-0215F79357BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E2EE351-3FFB-488F-8047-0215F79357BF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{8E2EE351-3FFB-488F-8047-0215F79357BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E2EE351-3FFB-488F-8047-0215F79357BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E2EE351-3FFB-488F-8047-0215F79357BF}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

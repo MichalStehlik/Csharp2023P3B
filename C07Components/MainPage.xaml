@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="C07Components.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center" 
+            x:Name="vsLayout"
+            >
+            <Label Text="Ahoj světe" x:Name="lblText" />
+            <Entry Text="Short story" Placeholder="Nápověda textu" 
+                   x:Name="entText" TextChanged="entText_TextChanged"/>
+            <Button Text="Go" x:Name="btnGo" Clicked="btnGo_Clicked"/>
+            <Button Text="Goo" x:Name="btnGo2" Clicked="btnGo_Clicked"/>
+            <Border BackgroundColor="Orange">
+                <Label Text="Starý text" />
+            </Border>
+            <Label x:Name="lblChecked" Text="Check"/>
+            <CheckBox IsChecked="False" CheckedChanged="CheckBox_CheckedChanged"/>
+            <Editor Text="Dlouhý text" />
+            <!-- <Image Source="dotnet_bot.png"/> -->
+            <ProgressBar Progress="0.2" />
+            <RadioButton />
+            <Slider Minimum="0" Maximum="100" Value="30"/>
+            <Stepper Value="10" Maximum="100" Minimum="0" />
+            <Switch IsToggled="True" />
+            <TimePicker />
+            <DatePicker Date="2024-01-01"/>
+            <Ellipse WidthRequest="100" HeightRequest="100" Stroke="Red"/>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
