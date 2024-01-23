@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "C02EFC", "C02EFC\C02EFC.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "C03Mongo", "C03Mongo\C03Mongo.csproj", "{60519B8E-6FA8-43F4-A8DD-8F6D9865DF92}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C04Events", "C04Events\C04Events.csproj", "{66E3E071-4AAC-4B7B-964C-848A5ADBB174}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "C04Events", "C04Events\C04Events.csproj", "{66E3E071-4AAC-4B7B-964C-848A5ADBB174}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C05FirstMaui", "C05FirstMaui\C05FirstMaui.csproj", "{9632634E-5C99-42E2-8AF3-40DE0E11289A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "C05FirstMaui", "C05FirstMaui\C05FirstMaui.csproj", "{9632634E-5C99-42E2-8AF3-40DE0E11289A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C06Layout", "C06Layout\C06Layout.csproj", "{BBAFCB67-7682-4DC4-A8A7-224A679DE3FE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,12 @@ Global
 		{9632634E-5C99-42E2-8AF3-40DE0E11289A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9632634E-5C99-42E2-8AF3-40DE0E11289A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9632634E-5C99-42E2-8AF3-40DE0E11289A}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{BBAFCB67-7682-4DC4-A8A7-224A679DE3FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBAFCB67-7682-4DC4-A8A7-224A679DE3FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBAFCB67-7682-4DC4-A8A7-224A679DE3FE}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{BBAFCB67-7682-4DC4-A8A7-224A679DE3FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBAFCB67-7682-4DC4-A8A7-224A679DE3FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBAFCB67-7682-4DC4-A8A7-224A679DE3FE}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
