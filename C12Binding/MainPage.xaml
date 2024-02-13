@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="C12Binding.MainPage">
+    <ContentPage.Resources>
+        <Color x:Key="MainColor">#ff0000</Color>
+        <sys:String x:Key="Welcome">Hello</sys:String>
+    </ContentPage.Resources>
+    <ScrollView>
+        <StackLayout>
+            <Label 
+                TextColor="{StaticResource MainColor}" 
+                Text="{StaticResource Welcome}"
+            />
+            <Button Text="RES" x:Name="btnRes" Clicked="btnRes_Clicked"/>
+            <Slider 
+                Value="20" 
+                Minimum="0" 
+                Maximum="100"
+                x:Name="sliValue"
+            />
+            <Label 
+                Text="{Binding Source={x:Reference sliValue}, Path=Value}" 
+            />
+            <Label Text="Jxxxxxxx" x:Name="lblName" />
+            <Entry x:Name="entName" />
+            <Label 
+                Text="{
+                    Binding Source={x:Reference entName2}, 
+                    Path=Text
+                }" x:Name="lblName2" 
+            />
+            <Entry x:Name="entName2" />
+            <Slider x:Name="sliValue2" Maximum="100"/>
+            <Entry Text="{Binding Source={x:Reference sliValue2}, Path=Value}" />
+            <Entry Text="yyyy" x:Name="entValue1" />
+            <Entry Text="{Binding Source={x:Reference entValue1}, Path=Text, Mode=TwoWay}" />
+            <Rectangle WidthRequest="20" HeightRequest="20" Stroke="Red" BackgroundColor="Yellow"/>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
