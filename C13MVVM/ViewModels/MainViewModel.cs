@@ -17,6 +17,7 @@ namespace C13MVVM.ViewModels
         public MainViewModel()
         {
             Text = "Ahoj";
+            Width = 48;
         }
 
         public int Value 
@@ -56,6 +57,27 @@ namespace C13MVVM.ViewModels
             {
                 _text = value;
                 RaisePropertyChanged();
+                RaisePropertyChanged(nameof(TextLength));
+                RaisePropertyChanged(nameof(PasswordStrength));
+            }
+        }
+
+        public int TextLength
+        {
+            get 
+            { 
+                return _text.Length; 
+            }
+        }
+
+        public string PasswordStrength
+        {
+            get
+            {
+                if (_text.Length < 10)
+                    return "Weak";
+                else
+                    return "Strrrong";
             }
         }
 

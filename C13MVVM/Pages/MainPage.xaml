@@ -16,8 +16,12 @@
             <Label Text="{Binding Value}" />
             <Slider Value="{Binding Value}" Maximum="20"/>
             <Label Text="{Binding Width}" />
-            <Slider Value="{Binding Width}" Maximum="20"/>
+            <Slider Value="{Binding Width}" Maximum="100"/>
             <Entry Text="{Binding Text}" />
+            <Label Text="{Binding TextLength}" />
+            <Label Text="{Binding PasswordStrength}" />
+            <Label Text="{Binding TextLength}" />
+            <Label Text="{Binding Text}" FontSize="{Binding Width}"/>
         </VerticalStackLayout>
     </ScrollView>
 
