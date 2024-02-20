@@ -2,7 +2,11 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:C13MVVM.ViewModels"
+             xmlns:conv="clr-namespace:C13MVVM.Converters"
              x:Class="C13MVVM.MainPage">
+    <ContentPage.Resources>
+        <conv:TextToStrength x:Key="conv2str" />
+    </ContentPage.Resources>
     <ContentPage.BindingContext>
         <vm:MainViewModel />
     </ContentPage.BindingContext>
@@ -20,7 +24,7 @@
             <Entry Text="{Binding Text}" />
             <Label Text="{Binding TextLength}" />
             <Label Text="{Binding PasswordStrength}" />
-            <Label Text="{Binding TextLength}" />
+            <Label Text="{Binding TextLength, Converter={StaticResource conv2str}}" />
             <Label Text="{Binding Text}" FontSize="{Binding Width}"/>
         </VerticalStackLayout>
     </ScrollView>
