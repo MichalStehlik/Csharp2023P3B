@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:C13MVVM.ViewModels"
+             x:Class="C13MVVM.MainPage">
+    <ContentPage.BindingContext>
+        <vm:MainViewModel />
+    </ContentPage.BindingContext>
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+            <Label Text="{Binding Source={x:Reference sliValue}, Path=Value}" />
+            <Slider x:Name="sliValue" Value="10" />
+            <Label Text="{Binding Value}" />
+            <Slider Value="{Binding Value}" Maximum="20"/>
+            <Label Text="{Binding Width}" />
+            <Slider Value="{Binding Width}" Maximum="20"/>
+            <Entry Text="{Binding Text}" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
