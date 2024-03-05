@@ -15,20 +15,19 @@
             <x:String>werewolf.png</x:String>
             <x:String>rusalka.png</x:String>
         </x:Array>
-        <x:String x:Key="leshy">leshy.png</x:String>
-        <x:String x:Key="vampire">vampire.png</x:String>
-        <x:String x:Key="werewolf">werewolf.png</x:String>
-        <x:String x:Key="rusalka">rusalka.png</x:String>
-        
+        <conv:IntToPictureConvertor 
+            x:Key="int2pic" 
+            Pictures="{StaticResource pictures}" />
     </ContentPage.Resources>
     <ScrollView>
         <VerticalStackLayout>
-            <Image HeightRequest="200" HorizontalOptions="Center" />
-            <Label Text="0" />
-            <Button Text="Alert" />
-            <Button Text="-1" />
-            <Button Text="+1" />
-            <Button Text="+2" />
+            <Image HeightRequest="200" HorizontalOptions="Center" 
+                   Source="{Binding Position, Converter={StaticResource int2pic}}"/>
+            <Label Text="{Binding Position}" />
+            <Button Text="Alert" Command="{Binding AlertCommand}"/>
+            <Button Text="-1" Command="{Binding PreviousCommand}"/>
+            <Button Text="+1" Command="{Binding NextCommand}"/>
+            <Button Text="1" Command="{Binding ShiftCommand}" CommandParameter="1"/>
         </VerticalStackLayout>
         
         
