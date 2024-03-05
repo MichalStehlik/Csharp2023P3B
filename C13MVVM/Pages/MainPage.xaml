@@ -21,6 +21,7 @@
             <Slider Value="{Binding Value}" Maximum="20"/>
             <Label Text="{Binding Width}" />
             <Slider Value="{Binding Width}" Maximum="100"/>
+            <Entry Text="{Binding Width}" />
             <Entry Text="{Binding Text}" />
             <Label Text="{Binding TextLength}" />
             <Label Text="{Binding PasswordStrength}" />

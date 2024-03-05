@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:C14Command"
+             xmlns:vm="clr-namespace:C14Command.ViewModels"
+             xmlns:conv="clr-namespace:C14Command.Convertors"
+             x:Class="C14Command.MainPage">
+    <ContentPage.BindingContext>
+        <vm:MainViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <x:Array x:Key="pictures" Type="{x:Type x:String}">
+            <x:String>leshy.png</x:String>
+            <x:String>vampire.png</x:String>
+            <x:String>werewolf.png</x:String>
+            <x:String>rusalka.png</x:String>
+        </x:Array>
+        <x:String x:Key="leshy">leshy.png</x:String>
+        <x:String x:Key="vampire">vampire.png</x:String>
+        <x:String x:Key="werewolf">werewolf.png</x:String>
+        <x:String x:Key="rusalka">rusalka.png</x:String>
+        
+    </ContentPage.Resources>
+    <ScrollView>
+        <VerticalStackLayout>
+            <Image HeightRequest="200" HorizontalOptions="Center" />
+            <Label Text="0" />
+            <Button Text="Alert" />
+            <Button Text="-1" />
+            <Button Text="+1" />
+            <Button Text="+2" />
+        </VerticalStackLayout>
+        
+        
+    </ScrollView>
+
+</ContentPage>

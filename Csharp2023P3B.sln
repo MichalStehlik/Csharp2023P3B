@@ -27,7 +27,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "C11MultiPlatform", "C11Mult
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "C12Binding", "C12Binding\C12Binding.csproj", "{93D52101-B708-47F4-BD2D-7EEFB1B4C9C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C13MVVM", "C13MVVM\C13MVVM.csproj", "{066AE91E-4B16-43A9-8623-58A6D59EA267}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "C13MVVM", "C13MVVM\C13MVVM.csproj", "{066AE91E-4B16-43A9-8623-58A6D59EA267}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C14Command", "C14Command\C14Command.csproj", "{9F0F6FA7-2C6F-4ACB-9026-5AFE19A5C1C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -105,6 +107,12 @@ Global
 		{066AE91E-4B16-43A9-8623-58A6D59EA267}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{066AE91E-4B16-43A9-8623-58A6D59EA267}.Release|Any CPU.Build.0 = Release|Any CPU
 		{066AE91E-4B16-43A9-8623-58A6D59EA267}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{9F0F6FA7-2C6F-4ACB-9026-5AFE19A5C1C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F0F6FA7-2C6F-4ACB-9026-5AFE19A5C1C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F0F6FA7-2C6F-4ACB-9026-5AFE19A5C1C1}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{9F0F6FA7-2C6F-4ACB-9026-5AFE19A5C1C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F0F6FA7-2C6F-4ACB-9026-5AFE19A5C1C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F0F6FA7-2C6F-4ACB-9026-5AFE19A5C1C1}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
