@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:C16Db.ViewModels"
+             xmlns:model="clr-namespace:C16Db.Models"
+             x:Class="C16Db.Views.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+            <Button Text="Add" x:Name="btnAdd" Clicked="btnAdd_Clicked"/>
+            <CollectionView 
+                ItemsSource="{Binding Items}" 
+                x:Name="lvItems" 
+                VerticalOptions="Fill"
+                SelectedItem="{Binding SelectedItem}"
+                SelectionChanged="lvItems_SelectionChanged"
+                SelectionMode="Single">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="model:ShoppingItem">
+                        <Grid Padding="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="auto" />
+                            </Grid.ColumnDefinitions>
+                            <Label Text="{Binding Name}" />
+                            <Label Text="✔️" Grid.Column="2" IsVisible="{Binding Done}" />
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

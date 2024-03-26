@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="C16Db.Views.AddPage"
+             Title="Add">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label Text="Name" />
+            <Entry Text="{Binding NewName}" />
+            <Button Text="Add" Command="{Binding AddCommand}" CommandParameter="" Clicked="Save_Clicked" Margin="5"/>
+            <Button Text="Back" Clicked="Cancel_Clicked" Margin="5"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
