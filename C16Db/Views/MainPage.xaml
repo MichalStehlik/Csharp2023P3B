@@ -22,10 +22,12 @@
                     <DataTemplate x:DataType="model:ShoppingItem">
                         <Grid Padding="10">
                             <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="100" />
                                 <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="auto" />
+                                <ColumnDefinition Width="100" />
                             </Grid.ColumnDefinitions>
-                            <Label Text="{Binding Name}" />
+                            <Label Text="{Binding Name}" Grid.Column="1"/>
+                            <Label Text="{Binding Id}" Grid.Column="0"/>
                             <Label Text="✔️" Grid.Column="2" IsVisible="{Binding Done}" />
                         </Grid>
                     </DataTemplate>

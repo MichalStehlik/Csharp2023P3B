@@ -8,5 +8,6 @@
             Text=""
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+        <Label Text="{Binding SelectedItem.Name}" />
     </VerticalStackLayout>
 </ContentPage>

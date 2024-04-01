@@ -8,7 +8,7 @@ namespace C16Db.Constants
 {
     public static class Db
     {
-        public const string DatabaseFilename = "ShoppingList.db3";
+        public const string DatabaseFilename = "ShoppingList.sqlite";
         public const SQLite.SQLiteOpenFlags Flags =
         // open the database in read/write mode
         SQLite.SQLiteOpenFlags.ReadWrite |

@@ -8,6 +8,7 @@ namespace C16Db.Models
 {
     public class ShoppingItem
     {
+        [SQLite.PrimaryKey, SQLite.AutoIncrement]
         public int Id { get; set; }
         public string Name { get; set; }
         public bool Done { get; set; }

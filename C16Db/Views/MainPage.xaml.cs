@@ -30,14 +30,16 @@ namespace C16Db.Views
         private void lvItems_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var selectedItem = e.CurrentSelection.FirstOrDefault() as ShoppingItem;
-            if (selectedItem is not ShoppingItem item)
+            if (selectedItem is not ShoppingItem)
             {
                 return;
             }
-            Shell.Current.GoToAsync(nameof(DetailPage), true, new Dictionary<string, object>
+            var navigationParameter = new Dictionary<string, object>
             {
-                ["Item"] = item
-            });
+                { "value", selectedItem.Id }
+            };
+            Shell.Current.GoToAsync($"DetailPage?value=franc");
+            //Shell.Current.GoToAsync(nameof(DetailPage), navigationParameter);
         }
     }
 }

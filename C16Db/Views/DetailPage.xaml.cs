@@ -2,18 +2,18 @@ using C16Db.Models;
 
 namespace C16Db.Views;
 
-[QueryProperty(nameof(Item), "item")]
+[QueryProperty(nameof(Value), "value")]
 public partial class DetailPage : ContentPage
 {
-	private ShoppingItem _item;
-	public ShoppingItem Item {
-		get {return _item;}
-		set { _item = value; OnPropertyChanged(); }
+    private string _value = "xxx";
+	public string Value {
+		get {return _value;}
+		set { _value = value; OnPropertyChanged(); }
 	}
 	public DetailPage()
 	{
 		InitializeComponent();
-        BindingContext = (Application.Current.MainPage! as AppShell).MVM;
-		lblName.Text = Item.Name;
-	}
+        BindingContext = (Application.Current.MainPage! as AppShell).MVM /*this*/;
+        lblName.Text = Value.ToString();
+    }
 }
