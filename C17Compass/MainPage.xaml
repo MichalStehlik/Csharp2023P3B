@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:C17Compass.ViewModels"
+             xmlns:conv="clr-namespace:C17Compass.Converters"
+             x:Class="C17Compass.MainPage">
+    <ContentPage.BindingContext>
+        <vm:MainViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <conv:DegreeConverter x:Key="degrees" />
+        <conv:RotationConverter x:Key="rotations" />
+    </ContentPage.Resources>
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+            <Label Text="Compass" />
+            <Label Text="{Binding Monitoring}" />
+            <Label Text="{Binding North, Converter={StaticResource degrees}}" />
+            <Label Text="{Binding North, Converter={StaticResource rotations}}" />
+            <Image Source="dotnet_bot.png" 
+                   WidthRequest="360"
+                   HorizontalOptions="Center"
+                   Rotation="{Binding North, Converter={StaticResource rotations}}"
+                   />
+            <Button Command="{Binding ToggleCompassCommand}" Text="On/Off" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
